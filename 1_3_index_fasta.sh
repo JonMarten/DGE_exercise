@@ -9,9 +9,12 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=jm2294@medschl.cam.ac.uk
 
+FASTQ_FILE=$(head scripts/fastq_filelist.txt -n $SLURM_ARRAY_TASK_ID | tail -n 1)
+
 module load star/2.5.0a
 cd /rds/user/jm2294/rds-jmmh2-projects/interval_rna_seq/dge_test
 
+# Unnecessary to index fasta file, already indexed on cluster
 STAR --runThreadN 6\
  --runMode genomeGenerate\
  --genomeDir genome_index\
@@ -19,4 +22,3 @@ STAR --runThreadN 6\
  --sjdbGTFfile reference/Homo_sapiens.GRCh37.87.gtf.gz\
  --sjdbOverhang 149
  
-
