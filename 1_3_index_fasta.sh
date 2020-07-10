@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -A PAUL-SL3-CPU
 #SBATCH -p skylake
-#SBATCH --mem 20G
+#SBATCH --mem 100G
 #SBATCH -n6
 #SBATCH --job-name=genomeindex
 #SBATCH --time=12:0:0
