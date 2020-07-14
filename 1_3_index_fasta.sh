@@ -19,6 +19,6 @@ STAR --runThreadN 6\
  --runMode genomeGenerate\
  --genomeDir genome_index\
  --genomeFastaFiles /home/jm2294/rds/rds-jmmh2-public_databases/GRCh37_reference_fasta/hs37d5.fa\
- --sjdbGTFfile reference/Homo_sapiens.GRCh37.87.gtf.gz\
+ --sjdbGTFfile reference/Homo_sapiens.GRCh37.87.gtf\
  --sjdbOverhang 149
  
