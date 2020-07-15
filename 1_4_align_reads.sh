@@ -8,11 +8,11 @@
 #SBATCH --output=/rds/user/jm2294/rds-jmmh2-projects/interval_rna_seq/dge_test/logs/dge_test_makegenomeindex_%A_%a.log
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=jm2294@medschl.cam.ac.uk
+module load star/2.5.0a
+
+cd /rds/user/jm2294/rds-jmmh2-projects/interval_rna_seq/dge_test
 
 FASTQ_FILE=$(head scripts/fastq_filelist.txt -n $SLURM_ARRAY_TASK_ID | tail -n 1)
-
-module load star/2.5.0a
-cd /rds/user/jm2294/rds-jmmh2-projects/interval_rna_seq/dge_test
 
 STAR\
  --genomeDir genome_index\
