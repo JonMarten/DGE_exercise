@@ -21,3 +21,6 @@ prefetch SRR5223570
 
 # Convert all .sra files to .fastq
 fastq-dump SR*/*.sra
+
+# Get .grf file for alignment
+wget ftp://ftp.ensembl.org/pub/grch37/current/gtf/homo_sapiens/Homo_sapiens.GRCh37.87.gtf.gz

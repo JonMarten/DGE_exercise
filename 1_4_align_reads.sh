@@ -17,8 +17,8 @@ FASTQ_FILE=$(head scripts/fastq_filelist.txt -n $SLURM_ARRAY_TASK_ID | tail -n 1
 STAR\
  --genomeDir genome_index\
  --runThreadN 6\
- --readFilesIn FASTQ_files/${FASTQ_FILE}\
- --outFileNamePrefix aligned/dge_test_\
+ --readFilesIn FASTQ_files/${FASTQ_FILE}.fastq\
+ --outFileNamePrefix aligned/dge_test_${FASTQ_FILE}\
  --outSAMtype BAM SortedByCoordinate\
  --outSAMunmapped Within\
  --outSAMattributes Standard 
