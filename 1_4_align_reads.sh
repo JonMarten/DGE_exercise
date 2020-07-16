@@ -18,7 +18,7 @@ STAR\
  --genomeDir genome_index\
  --runThreadN 6\
  --readFilesIn FASTQ_files/${FASTQ_FILE}.fastq\
- --outFileNamePrefix aligned/dge_test_${FASTQ_FILE}\
+ --outFileNamePrefix aligned/dge_test_${FASTQ_FILE}_\
  --outSAMtype BAM SortedByCoordinate\
  --outSAMunmapped Within\
  --outSAMattributes Standard 
